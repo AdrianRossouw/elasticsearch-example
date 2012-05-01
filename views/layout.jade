@@ -1,0 +1,22 @@
+!!! 5
+html(lang='en')
+  head
+    block head
+      meta(charset='utf-8')
+      title
+        block title
+          = locals.title
+      link(rel='stylesheet', href='/css/bootstrap.css')
+      style body { padding-top: 60px; }
+
+  body
+    header.navbar.navbar-fixed-top: div.navbar-inner: div.container
+      a.brand(href='#')= locals.siteName
+
+    div#content.container
+      block content
+        h1 Layout Example
+        p If you can see this, something went terribly wrong 
+
+    script(src='/js/jquery-1.7.2.min.js') 
+    script(src='/js/bootstrap.min.js')

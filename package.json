@@ -1,0 +1,20 @@
+{
+    "author": "Adrian Rossouw <adrian@daemon.co.za> (http://daemon.co.za)",
+    "name": "elasticsearch-example",
+    "description": "Quick Example project to show how easy it is to integrate elasticsearch and couchdb.",
+    "version": "0.0.0",
+    "repository": {
+        "url": ""
+    },
+    "main": "index.js",
+    "engines": {
+        "node": "~0.6.7"
+    },
+    "dependencies": {
+        "express": "2.x",
+        "jade": "latest",
+        "underscore": "latest",
+        "request": "2.9.x"
+    },
+    "devDependencies": {}
+}

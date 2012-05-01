@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  form.form-horizontal(action='/', method='GET')
+      .input-append
+        input.search-query(name='q', type='text', placeholder='Search')
+        button.btn Go
+
+  - if (q && !results.length)
+    | Your search for <strong>#{q}</strong> returned no results.
+  - else if (results.length)
+    - each link in results
+      article.well
+        h1: a(href='/' + link._id) #{link.field_title}
+        != summarize(link.field_body);

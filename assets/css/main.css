@@ -1,0 +1,29 @@
+
+code, pre {
+  font-family: Menlo, Monaco, Andale Mono, Courier New, monospace;
+}
+
+code {
+  border: 1px solid #dfdfdf;
+  padding: 1px 3px;
+  font-size: 12px;
+  border-radius: 2px;
+}
+
+pre {
+  display: block;
+  padding: 14px;
+  margin: 0 0 18px;
+  line-height: 16px;
+  font-size: 11px;
+  border: 1px solid #dfdfdf;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+pre code {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
