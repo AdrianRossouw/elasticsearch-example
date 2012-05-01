@@ -15,24 +15,20 @@ app.use(express.static(__dirname + '/assets'));
 
 function summarize(str) {
     var ind = str.indexOf('<h3>');
-
     return str.substr(0, ~ind ? ind : 200);
 }
 
 function loadSearch(db) {
     return function(req, res, next) {
         var url = 'http://127.0.0.1:9200/'+db+'/'+db+'/_search?q='+req.query.q;
-
         req.searchResults = [];
         request({ uri: url, json: true }, function(err, resp, data) {
             if (err) return res.send(500);
-
             req.searchResults = _(data.hits.hits).map(function(hit) {
                 return hit._source;
             });
             next();
         });
-
     };
 }
 
